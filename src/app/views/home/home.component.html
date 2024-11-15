@@ -1,0 +1,20 @@
+<div style="background-color: #f6f6f6;">
+  <div  class="flex justify-center py-4">
+    <input-serach class="align-middle w-11/12 md:w-2/5 "></input-serach>
+  </div>
+    <spartan-carousel-preview class="py-3"></spartan-carousel-preview>
+    <app-pasillos></app-pasillos>
+  <div>
+ @for( homoCate of  categoriasHome; track homoCate.Id){
+  <div class="flex justify-between mx-2 ">
+    <h3 class="mx-2 font-semibold text-md"> {{homoCate.label}}</h3>
+    <h3 class="text-end underline text-green-600 font-semibold text-md"><a [routerLink]="['/categoria', '2']">Ver mas</a></h3>
+   </div>
+   <div class="w-full flex items-center justify-between overflow-x-auto lg:overflow-x-hidden border-2 border-blue-50">
+    @for( item of homoCate.listProducts; track item){
+      <app-product-card class="mx-2 w-1/3 flex-shrink-0 lg:w-1/6"></app-product-card>
+    }
+    </div>
+ }
+</div>
+</div>

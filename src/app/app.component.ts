@@ -13,7 +13,7 @@ import { ProductCardComponent } from './views/product-card/product-card.componen
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ProductCardComponent, NavbarComponent,RouterOutlet, AccordionComponent, HlmButtonDirective, InputSearchComponent, CarouselPreviewComponent, HlmCarouselComponent, HlmCarouselContentComponent, HlmCarouselItemComponent],
+  imports: [RouterOutlet ,ProductCardComponent, NavbarComponent,RouterOutlet, AccordionComponent, HlmButtonDirective, InputSearchComponent, CarouselPreviewComponent, HlmCarouselComponent, HlmCarouselContentComponent, HlmCarouselItemComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
