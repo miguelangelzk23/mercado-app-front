@@ -3,7 +3,7 @@
   <div class="flex overflow-x-auto items-center justify-center  md:items-center md:justify-center ml-1 -mr-3 mt-3 mb-3">
   @for (item of Pasillos; track item) {
     <section hlmCard class="bg-green-50 h-20 w-20 rounded-sm flex-shrink-0  mx-1.5  mb-2 shadow-md ">
-      <img class="object-cover w-full h-full rounded-md" src="{{item.UrlImage}}" alt="">
+     <a [routerLink]="['/categoria', '2']"> <img class="object-cover w-full h-full rounded-md" src="{{item.UrlImage}}" alt=""></a>
     </section>
   }
 </div>

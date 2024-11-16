@@ -10,7 +10,7 @@
       <div class="flex items-start justify-start">
         <span class="text-sm  text-gray-900 font-semibold dark:text-gray-900">$1.200</span>
       </div>
-      <div class="flex justify-end items-end  -mb-4">
+      <div class="flex justify-end items-end  -mb-4 -mr-1">
         <button *ngIf="!isQuantitySelectorVisible" (click)="showQuantitySelector()"
         class="text-white justify-end bg-green-400  focus:ring-4 focus:ring-green-300 rounded-full w-8 h-8 text-center font-extrabold text-lg">+
       </button>
@@ -19,19 +19,19 @@
           <!-- Botón de disminuir cantidad -->
           <button
             (click)="decreaseQuantity()"
-            class="w-6 h-6 flex items-center justify-center font-semibold text-white bg-green-400 shadow rounded-xl border-none">
+            class="px-2 py-0.5 flex items-center justify-center font-bold text-white bg-green-400  rounded-full border-none">
             -
           </button>
 
           <!-- Cantidad actual -->
-          <span class="text-lg font-semibold px-2.5 py-0.5 rounded-xl shadow text-black border-none bg-white">
+          <span class="text-lg font-semibold px-2 py-0.5 rounded-full  text-black bg-white  border-none ">
             {{ quantity }}
           </span>
 
           <!-- Botón de aumentar cantidad -->
           <button
             (click)="increaseQuantity()"
-            class="w-6 h-6 flex items-center justify-center  font-semibold bg-green-400 text-white rounded-xl  border-none">
+            class="px-2 py-0.5 flex items-center justify-center  font-bold bg-green-400 text-white rounded-full  border-none">
             +
           </button>
         </div>

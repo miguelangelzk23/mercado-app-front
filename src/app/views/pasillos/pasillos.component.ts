@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Category } from 'app/ui/carousel.component';
 
 @Component({
   selector: 'app-pasillos',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pasillos.component.html',
   styleUrl: './pasillos.component.css'
 })

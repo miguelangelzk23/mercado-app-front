@@ -1,11 +1,15 @@
 import { Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { lucideAirplay, lucideMenu, lucideShoppingBag } from '@ng-icons/lucide';
+
+import { HlmIconComponent, provideIcons } from '@spartan-ng/ui-icon-helm';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [HlmIconComponent],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.css'
+  styleUrl: './navbar.component.css',
+  providers: [provideIcons({ lucideShoppingBag,lucideMenu })],
 })
 export class NavbarComponent {
   constructor(private renderer: Renderer2){
