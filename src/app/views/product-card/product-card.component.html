@@ -1,4 +1,4 @@
-<div class="bg-white shadow-md rounded-lg max-w-md shadow-sm">
+<div class="bg-white shadow-md rounded-lg max-w-md">
   <a href="#">
     <img class="rounded-t-lg p-1" src="https://i.ibb.co/KqdgGY4/cosmetic-packaging-mockup-1150-40280.webp" alt="product image">
       </a>
@@ -7,10 +7,34 @@
         <p class="text-gray-900  text-xs tracking-tight dark:text-gray-900">Apple Watch Series 7 GPS</p>
       </a>
 
-      <div class="flex items-center justify-between">
+      <div class="flex items-start justify-start">
         <span class="text-sm  text-gray-900 font-semibold dark:text-gray-900">$1.200</span>
-        <a href="#"
-          class="text-white bg-green-300 hover:bg-green-800 focus:ring-4 focus:ring-green-300 rounded-full px-2 py-0.5 text-center font-extrabold text-lg">+</a>
+      </div>
+      <div class="flex justify-end items-end  -mb-4">
+        <button *ngIf="!isQuantitySelectorVisible" (click)="showQuantitySelector()"
+        class="text-white justify-end bg-green-400  focus:ring-4 focus:ring-green-300 rounded-full w-8 h-8 text-center font-extrabold text-lg">+
+      </button>
+         <!-- Selector de cantidad (se muestra después de hacer clic en '+') -->
+         <div *ngIf="isQuantitySelectorVisible" class="contain flex items-center space-x-0.5 z-10 rounded-md bg-green-400">
+          <!-- Botón de disminuir cantidad -->
+          <button
+            (click)="decreaseQuantity()"
+            class="w-6 h-6 flex items-center justify-center font-semibold text-white bg-green-400 shadow rounded-xl border-none">
+            -
+          </button>
+
+          <!-- Cantidad actual -->
+          <span class="text-lg font-semibold px-2.5 py-0.5 rounded-xl shadow text-black border-none bg-white">
+            {{ quantity }}
+          </span>
+
+          <!-- Botón de aumentar cantidad -->
+          <button
+            (click)="increaseQuantity()"
+            class="w-6 h-6 flex items-center justify-center  font-semibold bg-green-400 text-white rounded-xl  border-none">
+            +
+          </button>
+        </div>
       </div>
       </div>
       <div>
