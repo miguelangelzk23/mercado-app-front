@@ -1,0 +1,40 @@
+pipeline {
+    agent any
+
+    environment {
+        IMAGE_NAME = 'mi-app-angular'
+        REGISTRY = 'mi-repositorio-docker' // Cambia esto si usarás Docker Hub o privado
+        PORT = 80
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'master', url: 'https://github.com/miguelangelzk23/mercado-app-front/'
+            }
+        }
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    docker.build("${IMAGE_NAME}:latest")
+                }
+            }
+        }
+        stage('Run Docker Container Locally') {
+            steps {
+                script {
+                    docker.image("${IMAGE_NAME}:latest").run("-p ${PORT}:${PORT}")
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished'
+        }
+        failure {
+            echo 'Pipeline failed'
+        }
+    }
+}
