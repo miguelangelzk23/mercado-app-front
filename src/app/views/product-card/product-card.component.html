@@ -1,0 +1,43 @@
+<div class="bg-white shadow-md rounded-lg max-w-md">
+  <a [routerLink]="['/product', '2']">
+    <img class="rounded-t-lg p-1" src="https://i.ibb.co/KqdgGY4/cosmetic-packaging-mockup-1150-40280.webp" alt="product image">
+      </a>
+    <div class="px-2 pb-5">
+      <a href="#">
+        <p class="text-gray-900  text-xs tracking-tight dark:text-gray-900">Apple Watch Series 7 2GPS</p>
+      </a>
+
+      <div class="flex items-start justify-start">
+        <span class="text-sm  text-gray-900 font-semibold dark:text-gray-900">$1.200</span>
+      </div>
+      <div class="flex justify-end items-end  -mb-4 -mr-1">
+        <button *ngIf="!isQuantitySelectorVisible" (click)="showQuantitySelector()"
+        class="text-white justify-end bg-green-400  focus:ring-4 focus:ring-green-300 rounded-full w-8 h-8 text-center font-extrabold text-lg">+
+      </button>
+         <!-- Selector de cantidad (se muestra después de hacer clic en '+') -->
+         <div *ngIf="isQuantitySelectorVisible" class="contain flex items-center space-x-0.5 z-10 rounded-md bg-green-400">
+          <!-- Botón de disminuir cantidad -->
+          <button
+            (click)="decreaseQuantity()"
+            class="px-2 py-0.5 flex items-center justify-center font-bold text-white bg-green-400  rounded-full border-none">
+            -
+          </button>
+
+          <!-- Cantidad actual -->
+          <span class="text-lg font-semibold px-2 py-0.5 rounded-full  text-black bg-white  border-none ">
+            {{ quantity }}
+          </span>
+
+          <!-- Botón de aumentar cantidad -->
+          <button
+            (click)="increaseQuantity()"
+            class="px-2 py-0.5 flex items-center justify-center  font-bold bg-green-400 text-white rounded-full  border-none">
+            +
+          </button>
+        </div>
+      </div>
+      </div>
+      <div>
+
+    </div>
+</div>

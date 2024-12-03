@@ -1,0 +1,58 @@
+<!-- component -->
+
+<div class="min-w-screen min-h-[50%] bg-green-300 flex items-center p-5 lg:p-5 lg:-mt-5  overflow-hidden relative pt-44">
+    <div class="w-full max-w-6xl rounded bg-white shadow-xl p-2  lg:mt-2 -mt-40 lg:p-20 mx-auto text-gray-800 relative md:text-left">
+        <div class="md:flex items-center -mx-10">
+          <div class="w-full md:w-1/2 px-10 mb-0 md:mb-0 -mt-10">
+            <div class="relative">
+              <!-- Imagen escalada -->
+              <div class="relative z-10 transform scale-75 mx-auto">
+                <img src="https://test-mercado.s3.sa-east-1.amazonaws.com/images-app/Verduras.png" class="w-full" alt="">
+              </div>
+              <!-- Borde -->
+              <div class="border-4 scale-75 border-green-200 absolute top-10 bottom-10 left-10 right-10 z-0"></div>
+            </div>
+            <!-- Campo de texto para el precio -->
+            <div class="text-center -mt-16  mb-2">
+              <p class="text-2xl font-bold">$25.000</p>
+            </div>
+          </div>
+            <div class="w-full md:w-1/2 px-10 ">
+                <div class="mb-10">
+                    <h3 class="font-semibold  text-lg mb-">Paquete frutas y verduras</h3>
+                    <p class="text-sm">Banano, Mango, Papaya, Piña, Lulo, Manzana, Guayaba, Cebolla larga, Tomate, Papa criolla, Zanahoria, Yuca, Aguacate, Lechuga.</p>
+                </div>
+                <div>
+                  <div class="w-full flex items-center justify-between mb-2">
+                    <!-- Contenedor del selector de cantidad -->
+                    <div class="flex items-center">
+                      <div class="contain flex items-center space-x-1 z-10 rounded-md opacity-75  bg-green-400">
+                        <!-- Botón de disminuir cantidad -->
+                        <button class="px-4 py-1 flex items-center justify-center  text-black font-extrabold opacity-75  bg-green-400 rounded-full border-none">
+                          -
+                        </button>
+
+                        <!-- Cantidad actual -->
+                        <span class="text-lg font-semibold px-3 py-1 rounded-full text-black bg-white border-none">
+                          1
+                        </span>
+
+                        <!-- Botón de aumentar cantidad -->
+                        <button class="px-4 py-1 flex items-center justify-center bg-green-400 opacity-75  text-black font-extrabold rounded-full border-none">
+                          +
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- Botón "Agregar al carrito" alineado a la derecha -->
+                    <button class="bg-green-400 opacity-75 hover:opacity-100 rounded-md px-10 py-2 font-bold text-black">
+                      <i class="mdi mdi-cart -ml-2 mr-2"></i>Al carrito
+                    </button>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
