@@ -24,10 +24,13 @@ jobs:
       - name: Build Angular app
         run: npm run build --prod
 
+      - name: Install Railway CLI
+        run: |
+          curl -fsSL https://railway.app/cli.sh | sh
+          mv /home/runner/.railway/bin/railway /usr/local/bin/railway
+
       - name: Log in to Railway
-        uses: railwayapp/cli-action@v1
-        with:
-          railway_token: ${{ secrets.RAILWAY_TOKEN }}
+        run: railway login --apiKey ${{ secrets.RAILWAY_TOKEN }}
 
       - name: Deploy to Railway
         run: railway up --detach
